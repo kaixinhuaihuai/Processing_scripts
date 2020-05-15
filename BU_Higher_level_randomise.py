@@ -12,18 +12,18 @@ def getonefile(files, name):
     merger.run()
 
 
-# # get the directories
-# rootdirHS = "/media/phoenix/SeagateDrive/Dataset/Outputs/Belief_Updating/HS/Second_level/1st_step/HS/"
-# rootdirLS = "/media/phoenix/SeagateDrive/Dataset/Outputs/Belief_Updating/LS/Second_level/1st_step/LS/"
+# get the directories
+rootdirHS = "/media/phoenix/SeagateDrive/Dataset/Outputs/Belief_Updating/HS/Second_level/1st_step/HS/"
+rootdirLS = "/media/phoenix/SeagateDrive/Dataset/Outputs/Belief_Updating/LS/Second_level/1st_step/LS/"
 #
 #
-# for i in range (1,21):
-#     contrast_hs = glob.glob("%s/[0-2][0-9].gfeat/cope%s.feat/stats/cope1.nii.gz" %(rootdirHS,i))
-#     contrast_ls = glob.glob("%s/[0-2][0-9].gfeat/cope%s.feat/stats/cope1.nii.gz" %(rootdirLS,i))
-#     files = contrast_hs + contrast_ls
-#     print(files)
-#     assert len(files) == 47
-#     getonefile(files, i)
+for i in range (1,21):
+    contrast_hs = glob.glob("%s/[0-2][0-9].gfeat/cope%s.feat/stats/cope1.nii.gz" %(rootdirHS,i))
+    contrast_ls = glob.glob("%s/[0-2][0-9].gfeat/cope%s.feat/stats/cope1.nii.gz" %(rootdirLS,i))
+    files = contrast_hs + contrast_ls
+    print(files)
+    assert len(files) == 47
+    getonefile(files, i)
 
 
 os.chdir("/media/phoenix/SeagateDrive/Dataset/Outputs/Belief_Updating/Higher_level_inputs/")
